@@ -1,21 +1,10 @@
 {
-    "name": "angryzeta/sitio",
-    "description": "Sitio de la Banda Angry Zeta",
-    "type": "project",
-    "require": {
-        "composer/composer": "^1.8",
-        "psr/log": "^1.1"
-    },
-    "license": "MIT",
+    "name": "mariana/angryzeta",
     "authors": [
         {
-            "name": "Mariana Suarez del Cerro",
+            "name": "mar1011",
             "email": "mariana.suarezdelcerro@davinci.edu.ar"
         }
     ],
-    "autoload" : {
-        "psr-4": {
-            "Clases\\": "clases"
-        }
-    }
+    "require": {}
 }
