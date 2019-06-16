@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AngryZeta extends Migration
+class CreateClientesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class AngryZeta extends Migration
      */
     public function up()
     {
-        Schema::create('compra', function (Blueprint $table) {
+        Schema::create('clientes', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string("nombre",20);
+            $table->string("apellido",20);
+            $table->string("email",50)->unique();
+
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ class AngryZeta extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('compra');
+        Schema::dropIfExists('clientes');
     }
 }
