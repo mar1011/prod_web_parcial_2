@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
-use Faker\Provider\es_AR\PhoneNumber as FakerArg;
+
 
 class ClientesSeeder extends Seeder
 {
