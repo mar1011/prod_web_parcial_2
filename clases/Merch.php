@@ -11,7 +11,7 @@ class Merch
     public function __construct($nombre,$imagen)
     {
         $this->nombre=$nombre;
-        //$this->imagen=$imagen;
+        $this->imagen=$imagen;
     }
 
     /**
@@ -62,5 +62,24 @@ class Merch
         $this->descripcion = $descripcion;
     }
 
+    public static function merchPorNombre($nom)
+    {
+        $merch = Filesystem::getAll("merch/$nom");
 
+        $nombreMerch = new Nombre($nom);
+
+        $nombres = [];
+
+        foreach($merch as $m):
+
+            $imagen = "merch/". $nombreMerch->getNombre() . "/" . $m . "/$m.jpg";
+            //$nombre = file_get_contents("habitaciones/". $tipoHabitacion->getNombre() . "/" . $habitacion . "/precio.txt");
+            $descripcion = file_get_contents("merch/". $nombreMerch->getNombre() . "/" . $m . "/descripcion.txt");
+
+            $nombres[] = new Merch($m,$imagen);
+
+        endforeach;
+
+        return $nombres;
+    }
 }

@@ -3,14 +3,16 @@
 
     class Galeria
     {
-    protected $imagen;
-    protected $descripcion;
+        protected $imagen;
+        protected $descripcion;
 
 
-    public function __construct($imagen)
-    {
-        $this->imagen=$imagen;
-    }
+        public function __construct($imagen)
+        {
+            $this->imagen = $imagen;
+
+            parent::__construct($imagen);
+        }
 
         /**
          * @return mixed
@@ -36,5 +38,22 @@
             $this->descripcion = $descripcion;
         }
 
+        public static function armarGaleria($img)
+        {
+            $imagenes = Filesystem::getAll("galeria/$img");
+
+            $imagenGaleria = new Imagen($img);
+
+            $imgs = [];
+
+            foreach ($galeria as $img):
+
+                $imagen = "galeria/" . $imagenGaleria->getNombre() . "/" . $img . "/$img.jpg";
+
+                $imgs[] = new Galeria($imagen);
+            endforeach;
+
+            return $imgs;
+        }
 
     }

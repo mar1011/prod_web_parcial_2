@@ -39,7 +39,7 @@ endif;
 <div class="row">
 
 <div  class="col-6 offset-3">
-<form action="../procesar_nuevo.php" method="POST" class="formulario">
+<form action="procesar_nuevo.php" method="POST" class="formulario">
 <div class="form-group">
 
     <label class="etiqueta frase2" for="nombre">Usuario:</label>

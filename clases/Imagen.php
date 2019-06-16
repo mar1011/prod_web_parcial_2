@@ -4,14 +4,14 @@
 namespace Clases;
 
 
-class Nom
+class imagen
 {
-protected $nombre;
+    protected $nombre;
 
-public function  __construct($nombre)
-{
-    $this->nombre = $nombre;
-}
+    public function __construct($nombre)
+    {
+        $this->nombre = $nombre;
+    }
 
     /**
      * @return mixed

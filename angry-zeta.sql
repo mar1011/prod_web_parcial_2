@@ -90,3 +90,8 @@ INSERT INTO Merch VALUES (5,"merch/remera/remera.jpg","Remera de Angry Zeta & Th
 INSERT INTO Merch VALUES (6,"merch/remera oso/remera oso.jpg","Remera con el logo del oso","Remera Angry Zeta & The Hillbullys");
 
 SELECT * FROM Usuario;
+INSERT INTO Usuario VALUES (1,"admin","admin", "admin", "1234","admin@admin.com", "admin");
+INSERT INTO Usuario VALUES (2,"finn","finn", "Finn", "bubblegum","finn@adventuretime.com", "usuario");
+INSERT INTO Usuario VALUES (3,"Marceline","mar", "Marceline", "1234","marci@adventuretime.com", "usuario");
+INSERT INTO Usuario VALUES (4,"Mariana","Suarez", "mariana", "1234","mariana.suarezdelcerro@davinci.edu.ar", "usuario");
+

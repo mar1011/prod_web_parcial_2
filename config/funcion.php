@@ -1,6 +1,35 @@
 <?php
 include_once('config_global.php');
 
+
+function is_active($val){
+    if(!empty($_GET['s'])):
+        if($_GET['s'] == $val)
+            return " class='active'";
+    endif;
+
+    return false;
+}
+
+set_exception_handler('error_logs');
+
+function error_logs(\Clases\Exception $exception){
+
+    echo $exception->getMensaje("red","#fff");
+
+
+}
+
+function dd($arr, $print = true){
+    echo "<pre>";
+    if($print)
+        print_r($arr);
+    else
+        var_dump($arr);
+    echo "</pre>";
+
+    die();
+
 function verificar($nombre,$apellido,$mail){
 
     if(empty($nombre) || empty($apellido) || empty($mail) ){
@@ -31,32 +60,6 @@ function nombre_limpio($carpeta){
     return $nombre;
 }
 
-function is_active($val){
-    if(!empty($_GET['s'])):
-        if($_GET['s'] == $val)
-            return " class='active'";
-    endif;
 
-    return false;
-}
-
-set_exception_handler('error_logs');
-
-function error_logs(\Clases\Exception $exception){
-
-    echo $exception->getMensaje("red","#fff");
-
-
-}
-
-function dd($arr, $print = true){
-    echo "<pre>";
-    if($print)
-        print_r($arr);
-    else
-        var_dump($arr);
-    echo "</pre>";
-
-    die();
 
 }

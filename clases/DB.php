@@ -12,7 +12,10 @@ class DB
 
     private static function connect(){
 
-        $config = $_SERVER["HTTP_HOST"] == "localhost" ? parse_ini_file("config_local.ini",true) : parse_ini_file("config_produccion.ini",true);
+        $config = $_SERVER["HTTP_HOST"] == "localhost" ?
+            parse_ini_file("config_local.ini",true) :
+            parse_ini_file("config_produccion.ini",true);
+
 
         try{
             $host = $config["database"]["host"];
