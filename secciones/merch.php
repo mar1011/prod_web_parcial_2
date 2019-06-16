@@ -25,7 +25,7 @@ include_once('config/funcion.php');
 
  $merch = \Clases\FileSystem::getAll("merch");
         foreach ($merch as $nom ):
-        $elMerch = new \Clases\Nombre($nom);
+        $nombreMerch = new \Clases\Nombre($nom);
         endforeach;
 
         foreach (\Clases\Merch::merchPorNombre($nom) as $item):
@@ -33,7 +33,7 @@ include_once('config/funcion.php');
     <div class="card">
         <img  src="<?= $item->imagen; ?>" alt="<?= $item->descripcion; ?>" class="card-img-top">
     </div>
-        <p class="frase"><?=$elMerch->getNombre() ; ?></p>
+        <p class="frase"><?=$nombreMerch->getNombre() ; ?></p>
 <?php
 endforeach;
 ?>

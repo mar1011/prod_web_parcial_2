@@ -6,5 +6,10 @@
             "email": "mariana.suarezdelcerro@davinci.edu.ar"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload" : {
+        "psr-4": {
+            "Clases\\": "clases"
+        }
+    }
 }

@@ -73,13 +73,14 @@ class Merch
         foreach($merch as $m):
 
             $imagen = "merch/". $nombreMerch->getNombre() . "/" . $m . "/$m.jpg";
-            //$nombre = file_get_contents("habitaciones/". $tipoHabitacion->getNombre() . "/" . $habitacion . "/precio.txt");
-            $descripcion = file_get_contents("merch/". $nombreMerch->getNombre() . "/" . $m . "/descripcion.txt");
+            $nombre = file_get_contents("merch/". $nombreMerch->getNombre() . "/" . $m . "/nombre.txt");
 
-            $nombres[] = new Merch($m,$imagen);
+            $nombres[] = new Merch($nombre,$imagen);
 
         endforeach;
 
         return $nombres;
+
     }
+
 }

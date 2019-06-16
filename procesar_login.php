@@ -4,8 +4,8 @@ include_once('config/config_global.php');
 include_once('config/funcion.php');
 include_once('vendor/autoload.php');
 
-//\Clases\Session::start();
-session_start();
+\Clases\Session::start();
+//session_start();
 
 if(empty($_POST["email"]) || empty($_POST["password"])):
     \Clases\Session::put("error","Los campos email y password son obligatorios");

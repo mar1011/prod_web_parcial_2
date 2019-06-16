@@ -11,7 +11,7 @@
         {
             $this->imagen = $imagen;
 
-            parent::__construct($imagen);
+           // parent::__construct($imagen);
         }
 
         /**
@@ -46,7 +46,7 @@
 
             $imgs = [];
 
-            foreach ($galeria as $img):
+            foreach ($imagenes as $img):
 
                 $imagen = "galeria/" . $imagenGaleria->getNombre() . "/" . $img . "/$img.jpg";
 
