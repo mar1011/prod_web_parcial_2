@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class MerchSeeder extends Seeder
 {
@@ -17,7 +18,7 @@ class MerchSeeder extends Seeder
                 "nombre" => "CD Angry Zeta & The Hillbullys",
                 "imagen" => "",
                 "descripcion"=>"Primer CD de Estudio",
-                "precio"=> "$100",
+                "precio"=> 100,
                 "stock"=>"1",
             ],
             [
@@ -25,7 +26,7 @@ class MerchSeeder extends Seeder
                 "nombre" => "CD Angry Zeta & The Hillbullys",
                 "imagen" => "",
                 "descripcion"=>"CD grabado en Vivo",
-                "precio"=> "$150",
+                "precio"=> 150,
                 "stock"=>"1",
             ],
             [
@@ -35,7 +36,7 @@ class MerchSeeder extends Seeder
                 "descripcion"=>"Parches bordados.
                                 Colores: Negro y Blanco.
                                 Colores: Rojo, Blanco y Amarillo",
-                "precio"=> "$80",
+                "precio"=> 80,
                 "stock"=>"1",
             ],
             [
@@ -44,7 +45,7 @@ class MerchSeeder extends Seeder
                 "imagen" => "",
                 "descripcion"=>"Pin de metal. 
                                 Confeccionados por HorrorFlorido.",
-                "precio"=> "$80",
+                "precio"=> 80,
                 "stock"=>"1",
             ],
             [
@@ -53,7 +54,7 @@ class MerchSeeder extends Seeder
                 "imagen" => "",
                 "descripcion"=>"Remera de Angry Zeta & The Hillbullys.
                                 Talles: S-M-L-XL-XXL",
-                "precio"=> "$400",
+                "precio"=> 400,
                 "stock"=>"1",
             ],
             [
@@ -62,7 +63,7 @@ class MerchSeeder extends Seeder
                 "imagen" => "",
                 "descripcion"=>"Remera con el logo del oso.
                                 Talles: S-M-L-XL-XXL",
-                "precio"=> "$400",
+                "precio"=> 400,
                 "stock"=>"0",
             ],
 
