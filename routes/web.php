@@ -11,6 +11,40 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/*Route::get('/', function () {
+    return view('welcome');*/
+        Route::get("/",[
+            "as"   => "web.index",
+            "uses" => "WebController@index"
+        ]);
+        Route::get("/galeria",[
+            "as"   => "web.galeria",
+            "uses" => "WebController@galeria"
+        ]);
+        Route::get("/merch",[
+            "as"   => "web.merch",
+            "uses" => "WebController@merch"
+        ]);
+        Route::get("/contacto",[
+            "as"   => "web.contacto",
+            "uses" => "WebController@contacto"
+        ]);
+        Route::get("/registro",[
+            "as"   => "web.registro",
+            "uses" => "WebController@registro"
+        ]);
+        Route::get("/login",[
+            "as"   => "web.login",
+            "uses" => "WebController@login"
+        ]);
+
+        Route::group(["prefix" => "/panel"],function(){
+            Route::get('/','PanelController@admin')
+                ->middleware('isAdmin')
+                ->name('panel');
+            Route::resource("/merch","MerchController")
+                ->middleware('isAdmin');
+
+        //)};
 });
+        Auth::routes();
