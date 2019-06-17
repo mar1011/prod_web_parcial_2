@@ -13,8 +13,19 @@ class WebController extends Controller
      */
     public function index()
     {
-        //
+        return view("web.index");
     }
+
+    public function merch()
+    {
+        $merchs = Merch::all()->groupBy("mech.nombre");
+        return view("web.merch", compact("merchs"));
+    }
+    public function contacto()
+    {
+    return view("web.contacto");
+    }
+
 
     /**
      * Show the form for creating a new resource.
