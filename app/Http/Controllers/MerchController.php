@@ -3,23 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Merch;
-use Illuminate\Http\Request;
-use mysql_xdevapi\Session;
+
 class MerchController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Merch $merch)
+    public function index()
     {
-        $merchs = $merch->all();
+
 
     }
 
