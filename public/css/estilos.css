@@ -16,7 +16,7 @@ header{
     color:black;
 }
 #navegador ul{
-    list-style-position: none;
+    list-style-position: unset; /*none*/
     margin:0px;
     padding: 0px;
 

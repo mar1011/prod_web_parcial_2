@@ -6,7 +6,7 @@
     <article id="slide">
         <div class="container-fluid">
             <div class="container">
-                <img id="slide" class="img-fluid" src="img/slide.jpg" alt="Portada de Angry Zeta" width="100%" height="auto">
+                <img id="slide" class="img-fluid" src="{{asset("img/slide.jpg")}}" alt="Portada de Angry Zeta" width="100%" height="auto">
             </div>
         </div>
     </article>
@@ -27,7 +27,7 @@
                     <h1>¡Escuchá nuestro<br>nuevo album!</h1>
                     <div class="row">
                         <div class="col-md-3 ">
-                            <img id="cd" class="img-fluid" src="img/cd_nuevo.jpg" alt="Cd de Angry Zeta" width="200"  >
+                            <img id="cd" class="img-fluid" src="{{asset("img/cd_nuevo.jpg")}}" alt="Cd de Angry Zeta" width="200"  >
                         </div>
                         <div class="col-md-3">
                             <p class="texto">Escuchá el "Disco en Vivo", con rotura de cuerda y más. </p>
