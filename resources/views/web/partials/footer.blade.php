@@ -8,16 +8,16 @@
                     </div>
                     <div id="redes" class="col-lg-6 col-md-6 col-sm-12">
                         <ul class="float-right">
-                            <?php
-                            foreach($footer as $ind => $icono):
-                            ?>
-                            <li><a href="<?= $icono["href"]; ?>
-                                        " target="<?= $icono["target"]; ?>">
-                                    <img src="<?= $icono["img"]; ?>" alt="<?=$icono["alt"]; ?>" width="<?= $icono["width"]; ?>" title="<?=$icono["title"]; ?>"></a>
+
+                            @foreach($footer as $ind => $icono):
+
+                            <li><a href="{{$icono["href"]}}
+                                        " target="{{ $icono["target"]}}">
+                                    <img src="{{$icono["img"]}}" alt="{{$icono["alt"]}}" width="{{$icono["width"]}}" title="{{$icono["title"]}}"></a>
                             </li>
-                            <?php
-                            endforeach;
-                            ?>
+
+                            @endforeach;
+
                         </ul>
                     </div>
                 </div>
