@@ -15,4 +15,9 @@ class Merch extends Model
         [
          "nombre", "imagen", "descripcion", "precio", "stock"
         ];
+
+    protected function Compras(){
+        return $this->belongsToMany(Cliente::class,"compras",
+            "merch_id","clientes_id");
+    }
 }
