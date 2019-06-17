@@ -43,7 +43,7 @@
     <article id="flyer">
         <div class="container-fluid">
             <div class="container">
-                <img class="img-fluid" src="img/flyer.jpg" alt="Flyer de Gira" >
+                <img class="img-fluid" src="{{asset("img/flyer.jpg")}}" alt="Flyer de Gira" >
             </div>
         </div>
     </article>
