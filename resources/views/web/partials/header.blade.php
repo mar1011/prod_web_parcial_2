@@ -18,7 +18,7 @@
                     </ul>
                 <ul class="navbar-nav mr-0">
                     <li class="nav-item">
-                        <a class="nav-link"href="{{ route("panel.index") }}">Panel</a>
+                         <a class="nav-link"href="#">Panel</a>
                     </li>
                     </ul>
                 </div>
