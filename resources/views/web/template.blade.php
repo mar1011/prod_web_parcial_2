@@ -39,6 +39,7 @@
     $footer[]=["href" => "https://open.spotify.com/artist/4UqeMTEuXMvaTaJV8iIE9V", "target" => "_blank", "img" => "img/spotify.png", "alt" => "Spotify"  ,"width" => "30", "title" => "Spotify" ];
 
     @endphp
+
     @include("web.partials.footer")
 
 <!-- Optional JavaScript -->
