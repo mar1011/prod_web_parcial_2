@@ -17,10 +17,6 @@
             "as"   => "web.index",
             "uses" => "WebController@index"
         ]);
-        Route::get("/galeria",[
-            "as"   => "web.galeria",
-            "uses" => "WebController@galeria"
-        ]);
         Route::get("/merch",[
             "as"   => "web.merch",
             "uses" => "WebController@merch"
@@ -29,14 +25,14 @@
             "as"   => "web.contacto",
             "uses" => "WebController@contacto"
         ]);
-        Route::get("/registro",[
+        /*Route::get("/registro",[
             "as"   => "web.registro",
             "uses" => "WebController@registro"
         ]);
         Route::get("/login",[
             "as"   => "web.login",
             "uses" => "WebController@login"
-        ]);
+        ]);*/
 
         Route::group(["prefix" => "/panel"],function(){
             Route::get('/','PanelController@admin')
