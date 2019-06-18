@@ -1,6 +1,6 @@
 @extends("web.template")
-@section("contenido")
 
+@section("contenido")
     <!--TÍTULO-->
     <div class="row">
         <div class="container">

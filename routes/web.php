@@ -34,7 +34,7 @@
             "uses" => "WebController@login"
         ]);*/
 
-        Route::group(["prefix" => "/panel"],function(){
+        /*Route::group(["prefix" => "/panel"],function(){
             Route::get('/','PanelController@admin')
                 ->middleware('isAdmin')
                 ->name('panel');
@@ -42,5 +42,5 @@
                 ->middleware('isAdmin');
 
         //)};
-});
+});*/
         Auth::routes();
