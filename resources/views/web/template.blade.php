@@ -6,26 +6,21 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="{{asset("img/banjo.png")}}" >
     <!--FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <base href="{{ asset("/") }}">
+
     <!--CSS-->
-    <link rel="stylesheet"  href="{{asset("ccs/estilos.css")}}">
+    <link rel="stylesheet"  href="{{ asset("ccs/estilos.css") }}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset("https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css")}} integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     @yield("css")
 
 </head>
-<body class="fondo">
-    @php
-    $nav = [
-        "Inicio" => route("web.index"),
-        "Merch" =>route("web.merch"),
-        "Contacto"=>route("web.contacto")
-       ];
-    @endphp
+<body class="fondo" style="background-image: url(img/fondo.jpg);">
 
-    @include("web.partials.header",$nav)
+    @include("web.partials.header")
 
     {{--Contenido--}}
 
@@ -41,7 +36,7 @@
 
     @endphp
 
-    @include("web.partials.footer")
+    @include("web.partials.footer",$footer)
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

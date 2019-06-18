@@ -10,12 +10,17 @@
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <ul class="navbar-nav container">
-                     @foreach($nav as $ind => $boton)
+
                     <li class="nav-item active">
-                    <a class=" nav-link" href="{{ $boton }}">{{ $ind }}</a>
+                    <a class=" nav-link" href="{{ route("web.index") }}">Inicio</a>
                     </li>
-                    @endforeach
-                    </ul>
+                    <li class="nav-item active">
+                        <a class=" nav-link" href="{{ route("web.merch") }}">Merch</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class=" nav-link" href="{{ route("web.contacto") }}">Contacto</a>
+                    </li>
+                </ul>
                 <ul class="navbar-nav mr-0">
                     <li class="nav-item">
                          <a class="nav-link"href="#">Panel</a>
