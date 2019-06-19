@@ -18,26 +18,33 @@
 <section>
 
     <div class="container">
+
         <div class="card-columns">
+
             @foreach($merchs as $m => $listamerch)
 
-            <div class="card">
-                <img  src="{{$listamerch->imagen}}" alt="{{$listamerch->nombre}}" class="card-img-top">
-
+            <div class="card bg-dark mb-3  ">
+                <img class="card-img-top" src="{{$listamerch->imagen}}" alt="{{$listamerch->nombre}}" class="card-img-top">
+                <div class="card-body frase2">
+                <h6 class="card-title">{{$listamerch->nombre}}</h6>
+                <p class="card-text">Precio: ${{$listamerch->precio}}</p>
+                </div>
             </div>
-
-            <div>
-                <p class="frase">{{$listamerch->nombre}}</p>
-                <p class="frase">Precio: ${{$listamerch->precio}}</p>
-            </div>
-                @if($listamerch->stock)
-            <a href="#" class="book-room-btn btn bg-success-btn">Comprar</a>
-            @else
-            <span class="book-room-btn btn bg-danger palatin-btn">No disponible</span>            @endif
+        @if($listamerch->stock)
+            <a href="#" class="btn btn-success botoncito">Comprar</a>
+        @else
+            <button type="button" class="btn btn-danger">No disponible</button>
+        @endif
 
 
-      @endforeach
+
+
+
+            @endforeach
+        </div>
         </div>
     </div>
+
 </section>
+
 @endsection

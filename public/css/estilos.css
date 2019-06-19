@@ -76,12 +76,15 @@ header{
 .frase{
     font-family: 'Roboto', sans-serif;
     color:white;
-    margin-left: 65px;
+
 
 }
 .frase2{
     font-family: 'Roboto', sans-serif;
     color:white;
+
+}
+.botoncito{
 
 }
 .contacto{
