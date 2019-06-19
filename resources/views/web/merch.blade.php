@@ -16,9 +16,10 @@
 
 <!--IMÁGENES -->
 <section>
-    @forelse($merchs as $m => $listamerch)
+
     <div class="container">
         <div class="card-columns">
+            @foreach($merchs as $m => $listamerch)
             <div class="card">
 
                 <img  src="{{$listamerch->imagen}}" alt="{{$listamerch->nombre}}" class="card-img-top">
@@ -29,13 +30,13 @@
 
             @if($listamerch->stock)
 
-                <a href="#" class="book-room-btn btn palatin-btn">Reservar</a>
+                <a href="#" class="book-room-btn btn palatin-btn">Comprar</a>
             @else
                 <span class="book-room-btn btn bg-danger palatin-btn">No disponible</span>
 
             @endif
 
-      @endforelse
+      @endforeach
         </div>
     </div>
 </section>
