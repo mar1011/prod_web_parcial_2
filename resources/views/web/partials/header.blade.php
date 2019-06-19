@@ -1,7 +1,7 @@
 <header>
     <!--NAVBAR-->
     <div class="row">
-        <div class="container-fluid">
+        <div class="container">
             <nav id="navegador" class="navbar navbar-fixed-top navbar-expand-lg  navbar-dark ">
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

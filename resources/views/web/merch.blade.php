@@ -23,7 +23,7 @@
 
             @foreach($merchs as $m => $listamerch)
 
-            <div class="card bg-dark mb-3  ">
+            <div class="card bg-dark mb-3 ">
                 <img class="card-img-top" src="{{$listamerch->imagen}}" alt="{{$listamerch->nombre}}" class="card-img-top">
                 <div class="card-body frase2">
                 <h6 class="card-title">{{$listamerch->nombre}}</h6>
