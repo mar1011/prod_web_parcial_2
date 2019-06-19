@@ -28,14 +28,13 @@
                 <div class="card-body frase2">
                 <h6 class="card-title">{{$listamerch->nombre}}</h6>
                 <p class="card-text">Precio: ${{$listamerch->precio}}</p>
+                    @if($listamerch->stock)
+                    <a href="#" class="btn btn-success">Comprar</a>
+                    @else
+                        <button type="button" class="btn btn-danger">No disponible</button>
+                    @endif
                 </div>
             </div>
-        @if($listamerch->stock)
-            <a href="#" class="btn btn-success botoncito">Comprar</a>
-        @else
-            <button type="button" class="btn btn-danger">No disponible</button>
-        @endif
-
 
 
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-06-2019 a las 06:08:47
+-- Tiempo de generación: 19-06-2019 a las 20:35:25
 -- Versión del servidor: 10.3.15-MariaDB
 -- Versión de PHP: 7.3.6
 
@@ -180,12 +180,12 @@ CREATE TABLE `merch` (
 --
 
 INSERT INTO `merch` (`id`, `nombre`, `imagen`, `descripcion`, `precio`, `stock`, `created_at`, `updated_at`) VALUES
-(1, 'CD Angry Zeta & The Hillbullys', '', 'Primer CD de Estudio', 100.00, 1, NULL, NULL),
-(2, 'CD Angry Zeta & The Hillbullys', '', 'CD grabado en Vivo', 150.00, 1, NULL, NULL),
-(3, 'Parche Angry Zeta & The Hillbullys', '', 'Parches bordados.\n                                Colores: Negro y Blanco.\n                                Colores: Rojo, Blanco y Amarillo', 80.00, 1, NULL, NULL),
-(4, 'Pin Angry Zeta & The Hillbullys', '', 'Pin de metal. \n                                Confeccionados por HorrorFlorido.', 80.00, 1, NULL, NULL),
-(5, 'Remera Angry Zeta & The Hillbullys', '', 'Remera de Angry Zeta & The Hillbullys.\n                                Talles: S-M-L-XL-XXL', 400.00, 1, NULL, NULL),
-(6, 'Remera Angry Zeta & The Hillbullys', '', 'Remera con el logo del oso.\n                                Talles: S-M-L-XL-XXL', 400.00, 0, NULL, NULL);
+(1, 'CD Angry Zeta & The Hillbullys', 'img/cd1.jpg', 'Primer CD de Estudio', 100.00, 1, NULL, NULL),
+(2, 'CD Angry Zeta & The Hillbullys', 'img/cd 2.jpg', 'CD grabado en Vivo', 150.00, 1, NULL, NULL),
+(3, 'Parche Angry Zeta & The Hillbullys', 'img/parche.jpg', 'Parches bordados.\n                                Colores: Negro y Blanco.\n                                Colores: Rojo, Blanco y Amarillo', 80.00, 1, NULL, NULL),
+(4, 'Pin Angry Zeta & The Hillbullys', 'img/pin.jpg', 'Pin de metal. \n                                Confeccionados por HorrorFlorido.', 80.00, 1, NULL, NULL),
+(5, 'Remera Angry Zeta & The Hillbullys', 'img/re1.jpg', 'Remera de Angry Zeta & The Hillbullys.\n                                Talles: S-M-L-XL-XXL', 400.00, 1, NULL, NULL),
+(6, 'Remera Angry Zeta & The Hillbullys', 'img/re2.jpg', 'Remera con el logo del oso.\n                                Talles: S-M-L-XL-XXL', 400.00, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
