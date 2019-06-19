@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/routes/web.php" line="27" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d2ec5ed-9f51-4bfe-898f-3f713662d42c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/web/merch.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/web/merch.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="1d2ec5ed-9f51-4bfe-898f-3f713662d42c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/web/merch.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="600">
+              <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -48,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/web/partials/header.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -121,8 +119,8 @@
         <option value="$PROJECT_DIR$/resources/views/web/template.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WebController.php" />
         <option value="$PROJECT_DIR$/public/css/estilos.css" />
-        <option value="$PROJECT_DIR$/resources/views/web/merch.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/web/partials/header.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/merch.blade.php" />
       </list>
     </option>
   </component>
@@ -216,7 +214,7 @@
       <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1130" />
     <option name="y" value="-17" />
     <option name="width" value="1475" />
@@ -336,18 +334,18 @@
       <workItem from="1560639048213" duration="8302000" />
       <workItem from="1560653618875" duration="1990000" />
       <workItem from="1560656733722" duration="47523000" />
-      <workItem from="1560891405570" duration="12303000" />
+      <workItem from="1560891405570" duration="12948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105035000" />
+    <option name="totallyTimeSpent" value="105680000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-173" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0315534" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25080907" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -679,13 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/merch.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/web/template.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1150">
@@ -700,6 +691,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/web/merch.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
         </state>
       </provider>
     </entry>
