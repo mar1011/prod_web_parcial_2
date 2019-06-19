@@ -20,21 +20,21 @@
     <div class="container">
         <div class="card-columns">
             @foreach($merchs as $m => $listamerch)
+
             <div class="card">
-
                 <img  src="{{$listamerch->imagen}}" alt="{{$listamerch->nombre}}" class="card-img-top">
+
             </div>
-            <p class="frase">{{$listamerch->nombre}}</p>
-            <p class="frase">{{$listamerch->precio}}</p>
-            <p class="frase">{{$listamerch->stock}}</p>
 
-            @if($listamerch->stock)
-
-                <a href="#" class="book-room-btn btn palatin-btn">Comprar</a>
+            <div>
+                <p class="frase">{{$listamerch->nombre}}</p>
+                <p class="frase">Precio: ${{$listamerch->precio}}</p>
+            </div>
+                @if($listamerch->stock)
+            <a href="#" class="book-room-btn btn bg-success-btn">Comprar</a>
             @else
-                <span class="book-room-btn btn bg-danger palatin-btn">No disponible</span>
+            <span class="book-room-btn btn bg-danger palatin-btn">No disponible</span>            @endif
 
-            @endif
 
       @endforeach
         </div>
