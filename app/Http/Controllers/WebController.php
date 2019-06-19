@@ -16,9 +16,9 @@ class WebController extends Controller
         return view("web.index");
     }
 
-    public function merch()
+    public function merch(Merch $merch)
     {
-        $merchs = Merch::all()->groupBy("mech.nombre");
+        $merchs = $merch->all();
         return view("web.merch", compact("merchs"));
     }
     public function contacto()
