@@ -1,7 +1,7 @@
 <header>
     <!--NAVBAR-->
     <div class="row">
-        <div class="container-fluid">
+        <div class="container">
 
             <nav id="navegador" class="navbar navbar-fixed-top navbar-expand-lg  navbar-dark ">
 
@@ -11,26 +11,17 @@
 
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
-                    <ul class="navbar-nav container">
+                    <ul class="navbar-nav container-fluid">
 
                         <li class="nav-item active">
 
                             <a class=" nav-link" href="{{route("merch.index")}}">Merch</a>
-                            <a class=" nav-link" href="#">Usuarios</a>
                         </li>
                     </ul>
-                    <!-- desplegable-->
-                    <ul class="navbar-nav mr-0">
-
-                        <li class="nav-item dropleft">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Usuario
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Perfil</a>
-                                <a class="dropdown-item" href="#">Logout</a>
-                            </div>
+                            <ul class="navbar-nav mr-0">
+                                <li class="nav-item">
+                            <a class=" nav-link" href="#">Perfil</a>
+                            <a class=" nav-link" href="#">Logout</a>
                         </li>
                     </ul>
                 </div>

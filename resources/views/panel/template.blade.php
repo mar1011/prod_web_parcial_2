@@ -18,7 +18,7 @@
 </head>
 <body class="fondo" style="background-image: url(img/fondo.jpg);">
 
-    @include("web.partials.header")
+    @include("panel.partials.header")
 
     {{--Contenido--}}
 
@@ -34,7 +34,7 @@
 
     @endphp
 
-    @include("web.partials.footer",$footer)
+    @include("panel.partials.footer",$footer)
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

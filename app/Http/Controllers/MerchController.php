@@ -11,9 +11,10 @@ class MerchController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Merch $merch)
     {
-
+        $merchs = $merch->all();
+        return view("panel.merch.index",compact("merchs"));
 
     }
 

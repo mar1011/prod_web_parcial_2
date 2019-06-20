@@ -25,6 +25,18 @@
             "as"   => "web.contacto",
             "uses" => "WebController@contacto"
         ]);
+        Route::group(["prefix" => "/panel"],function (){
+
+
+        Route::get("/",[
+        "as" => "panel.index",
+        "uses" => "PanelController@index"
+        ]);
+
+        Route::resource("/merch","MerchController");
+
+        });
+
         /*Route::get("/registro",[
             "as"   => "web.registro",
             "uses" => "WebController@registro"
