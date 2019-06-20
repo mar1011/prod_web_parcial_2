@@ -35,10 +35,11 @@
                     @forelse($merchs as $merch)
                         <tr>
                             <td>{{ $merch->nombre }}</td>
-                            <td>{{ $merch->Imagen }}</td>
-                            <td>{{ $merch->Descripcion }}</td>
-                            <td>{{ $merch->Precio }}</td>
-                            <td>{{ $merch->Stock }}</td>
+                            <td>{{ $merch->descripcion }}</td>
+                            <td>${{ $merch->precio }}</td>
+                            <td> {{ $merch->stock }}</td>
+                            <td><img src="{{ $merch->imagen }}" alt="{{ $merch->nombre }}" width="200"></td>
+
                             <td>
                                 <div class="dropdown">
                                     <button class="btn btn-sm btn-info dropdown-toggle" type="button"

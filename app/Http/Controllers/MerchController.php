@@ -75,9 +75,9 @@ class MerchController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id, Merch $merch)
+    public function edit($id)
     {
-        $merchs = $merch->all();
+        $merchs = Merch::all();
         $merch = Merch::find($id);
 
         return view("panel.merch.form",compact("merch","merchs"));
@@ -98,9 +98,9 @@ class MerchController extends Controller
 
         if($request->hasFile('imagen')):
 
-            $nombre = $datos["nombre"] . "." . $request->imagen->extension();
+            $nombre = $request->nombre . "." . $request->imagen->extension();
             $request->imagen->storeAs("merch",$nombre);
-            $datos["imagen"]= "merch/$nombre";
+            $datos["imagen"]= "img/$nombre";
 
         endif;
 
