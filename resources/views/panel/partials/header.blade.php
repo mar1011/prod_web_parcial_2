@@ -18,12 +18,12 @@
                             <a class=" nav-link" href="{{route("merch.index")}}">Merch</a>
                         </li>
                     </ul>
-                            <ul class="navbar-nav mr-0">
+                           <!-- <ul class="navbar-nav mr-0">
                                 <li class="nav-item">
                             <a class=" nav-link" href="#">Perfil</a>
                             <a class=" nav-link" href="#">Logout</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
         </div>
         </nav>

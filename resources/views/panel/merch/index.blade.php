@@ -1,14 +1,15 @@
+
 @extends("panel.template")
 
 @section("contenido")
 
 
-@endsection
+
 <div class="container">
     <div class="row mt-5">
         <div class="col-12">
-            <h1 class="h3">Merch</h1>
-            <a href="{{ route("merch.create") }}" class="btn btn-sm btn-primary float-right">Nueva</a>
+            <h2>Lista de Merch</h2>
+            <a href="{{ route("merch.create") }}" class="btn btn-lg btn-primary float-right">Nuevo</a>
         </div>
     </div>
 
@@ -16,7 +17,7 @@
 
         <div class="col-12">
             <div class="table-responsive">
-                <table class="table table-bordered table-sm fs-90">
+                <table class="table mt-5 nov">
                     <thead class="thead-light text-center">
                     <tr>
                         <th>Nombre</th>
@@ -24,8 +25,6 @@
                         <th>Precio</th>
                         <th>Stock</th>
                         <th>Imagen</th>
-
-
 
                     </tr>
                     </thead>
@@ -68,3 +67,4 @@
 
     </div>
 </div>
+@endsection
