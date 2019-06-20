@@ -6,11 +6,11 @@
 
 
 <div class="container">
-    <div class="row mt-5">
+    <div class="row nov">
         <div class="col-12">
-            <h2>Lista de Merch</h2>
+            <h2 class="titulo text-center display-4">Lista de Merch</h2>
 
-            <a href="{{ route("merch.create") }}" class="btn btn-lg btn-primary float-right">Nuevo</a>
+            <a href="{{ route("merch.create") }}" class="btn btn-lg btn-primary text-center">Nuevo</a>
         </div>
     </div>
 

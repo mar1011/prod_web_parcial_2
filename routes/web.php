@@ -37,6 +37,8 @@
 
         });
 
+
+
         /*Route::get("/registro",[
             "as"   => "web.registro",
             "uses" => "WebController@registro"
