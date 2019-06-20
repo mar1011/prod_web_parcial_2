@@ -51,11 +51,12 @@ class MerchController extends Controller
             $datos["imagen"]= "img/$nombre";
         endif;
 
-        if(Merch::create($datos)):
+
+        /*if(Merch::create($datos)):
             return redirect()->route("merch.index")->with("ok","Merch cargado con éxito!");
         else:
             return redirect()->back()->withInput()->withErrors("No se pudo cargar");
-        endif;
+        endif;*/
 
     }
 

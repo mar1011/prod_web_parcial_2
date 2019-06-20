@@ -5,11 +5,21 @@
     <div class="row nov">
         <div class="container-fluid">
             <h4 class="titulo text-center display-4">Cargar Nuevo</h4>
+            @if($errors->any())
+                <div class="alert-danger">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{$error}}</li>
+                            @endforeach
+                    </ul>
+                </div>
+            @endif
         </div>
     </div>
 
     <div class="container">
         <div class="row">
+
 
             <div class="col-6 offset-3">
                 @if(isset($merch))

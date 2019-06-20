@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="col-md-6">
 
-                    <img class="img-fluid" src="{{asset("img/gira3.jpg")}}" alt="Flyer de Gira" width="500" >
+                    <img class="img-fluid" src="{{asset("img/gira3.png")}}" alt="Flyer de Gira" width="500" >
                 </div>
 
                 <div class="col-md-6">
