@@ -46,7 +46,8 @@ class MerchController extends Controller
         if($request->hasFile('imagen')):
 
             $nombre = $request->nombre . "." . $request->imagen->extension();
-            $request->imagen->storeAs("merch",$nombre);
+            $request->imagen->move(public_path().'/img/',$nombre);
+            /*$request->imagen->storeAs("merch",$nombre);*/
             $datos["imagen"]= "img/$nombre";
         endif;
 
@@ -99,7 +100,8 @@ class MerchController extends Controller
         if($request->hasFile('imagen')):
 
             $nombre = $request->nombre . "." . $request->imagen->extension();
-            $request->imagen->storeAs("merch",$nombre);
+            $request->imagen->move(public_path().'/img/',$nombre);
+            /*$request->imagen->storeAs("merch",$nombre);*/
             $datos["imagen"]= "img/$nombre";
 
         endif;
