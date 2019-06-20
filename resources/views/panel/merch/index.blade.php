@@ -2,5 +2,69 @@
 
 @section("contenido")
 
-    
+
 @endsection
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-12">
+            <h1 class="h3">Merch</h1>
+            <a href="{{ route("merch.create") }}" class="btn btn-sm btn-primary float-right">Nueva</a>
+        </div>
+    </div>
+
+    <div class="row mt-2 mb-5">
+
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-sm fs-90">
+                    <thead class="thead-light text-center">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Imagen</th>
+
+
+
+                    </tr>
+                    </thead>
+                    <tbody class="text-center">
+
+                    @forelse($merchs as $merch)
+                        <tr>
+                            <td>{{ $merch->nombre }}</td>
+                            <td>{{ $merch->Imagen }}</td>
+                            <td>{{ $merch->Descripcion }}</td>
+                            <td>{{ $merch->Precio }}</td>
+                            <td>{{ $merch->Stock }}</td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn btn-sm btn-success dropdown-toggle" type="button"
+                                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                        Acciones
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item"
+                                           href="{{ route("merch.edit",$merch->id) }}">Editar</a>
+                                        <form action="{{ route("merch.destroy",$merch->id) }}" method="post">
+                                            @method("DELETE")
+                                            @csrf
+                                            <button type="submit" class="dropdown-item">Borrar</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    @empty
+                        <tr>
+                            <td colspan="7">No hay productos cargados</td>
+                        </tr>
+                    @endforelse
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
