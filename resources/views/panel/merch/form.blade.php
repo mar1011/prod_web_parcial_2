@@ -4,7 +4,7 @@
 
     <div class="row nov">
         <div class="container-fluid">
-            <h4 class="titulo text-center display-4">Cargar Nuevo</h4>
+            <h4 class="titulo text-center display-4">Cargar Nuevo y Editar</h4>
         </div>
     </div>
 
