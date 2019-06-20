@@ -10,7 +10,7 @@
         <div class="col-12">
             <h2 class="titulo text-center display-4">Lista de Merch</h2>
 
-            <a href="{{ route("merch.create") }}" class="btn btn-lg btn-primary text-center">Nuevo</a>
+            <a id = "cargar" href="{{ route("merch.create") }}" class="btn btn-lg btn-dark">Cargar Nuevo</a>
         </div>
     </div>
 
@@ -18,7 +18,7 @@
 
         <div class="col-12">
             <div class="table-responsive">
-                <table class="table mt-5 nov">
+                <table class="table mt-5 nov table-dark">
                     <thead class="thead-light text-center">
                     <tr>
                         <th>Nombre</th>
@@ -26,6 +26,7 @@
                         <th>Precio</th>
                         <th>Stock</th>
                         <th>Imagen</th>
+                        <th>Elegir</th>
 
                     </tr>
                     </thead>
@@ -40,7 +41,7 @@
                             <td>{{ $merch->Stock }}</td>
                             <td>
                                 <div class="dropdown">
-                                    <button class="btn btn-sm btn-success dropdown-toggle" type="button"
+                                    <button class="btn btn-sm btn-info dropdown-toggle" type="button"
                                             id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">
                                         Acciones
