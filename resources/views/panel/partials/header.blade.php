@@ -16,6 +16,7 @@
                         <li class="nav-item active">
 
                             <a class=" nav-link" href="{{route("merch.index")}}">Merch</a>
+                            <a class=" nav-link" href="{{route("merch.index")}}">Panel</a>
                         </li>
                     </ul>
                            <!-- <ul class="navbar-nav mr-0">

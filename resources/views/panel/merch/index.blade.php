@@ -9,6 +9,7 @@
     <div class="row mt-5">
         <div class="col-12">
             <h2>Lista de Merch</h2>
+
             <a href="{{ route("merch.create") }}" class="btn btn-lg btn-primary float-right">Nuevo</a>
         </div>
     </div>

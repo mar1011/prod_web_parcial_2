@@ -6,6 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <base href="{{ asset("/") }}">
     <link rel="icon" href="img/banjo.png">
     <!--FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
