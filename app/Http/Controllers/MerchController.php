@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\MerchRequests;
+use App\Models\Merch;
+use Dotenv\Validator;
 use Illuminate\Http\Request;
 
 class MerchController extends Controller
@@ -23,20 +26,35 @@ class MerchController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Merch $merch)
     {
-        //
+        $merchs = $merch->all();
+
+        return view("panel.merch.form",compact("merchs"));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\MerchRequest..$request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MerchRequest $request)
     {
-        //
+        $datos = $request->all();
+
+        if($request->hasFile('imagen')):
+
+            $nombre = $datos["nombre"] . "." . $request->imagen->extension();
+            $request->imagen->storeAs("merch",$nombre);
+            $datos["imagen"]= "merch/$nombre";
+        endif;
+
+        if(Merch::create($datos)):
+            return redirect()->route("merch.index")->with("ok","Merch cargado con éxito!");
+        else:
+            return redirect()->back()->withInput()->withErrors("No se pudo cargar");
+        endif;
     }
 
     /**
@@ -56,9 +74,12 @@ class MerchController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, Merch $merch)
     {
-        //
+        $merchs = $merch->all();
+        $merch = Merch::find($id);
+
+        return view("panel.merch.form",compact("merch","merchs"));
     }
 
     /**
@@ -68,9 +89,25 @@ class MerchController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(MerchRequest $request, $id)
     {
-        //
+        $merch = Merch::find($id);
+
+        $datos = $request->all();
+
+        if($request->hasFile('imagen')):
+
+            $nombre = $datos["nombre"] . "." . $request->imagen->extension();
+            $request->imagen->storeAs("merch",$nombre);
+            $datos["imagen"]= "merch/$nombre";
+
+        endif;
+
+        if($merch->update($datos)):
+            return redirect()->route("merch.index")->with("ok","Se modificó correctamente");
+        else:
+            return redirect()->back()->withInput()->withErrors("Error al editar");
+        endif;
     }
 
     /**
@@ -79,8 +116,15 @@ class MerchController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, Merch $merchs)
     {
-        //
+        $merch = $merchs->find($id);
+
+        if($merch->delete()):
+            return redirect()->route("merch.index")->with('ok','Merch eliminado con éxito!');
+        else:
+            return redirect()->back()->withErrors("No se pudo eliminar");
+        endif;
+
     }
 }
