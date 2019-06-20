@@ -29,7 +29,7 @@
 
                 <div class=" col-md-6 ">
 
-        <form class="formulario" action="#" method="post">
+        <form class="formulario" action="#" method="get">
             <div class="form-group">
                 <span class="etiqueta">Nombre:</span> <br>
                 <input type="text" name="nombre" class="form-control" > <br>
