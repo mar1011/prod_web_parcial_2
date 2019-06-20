@@ -20,22 +20,22 @@
                     @endif
                     @csrf
                     <div class="form-group">
-                        <label class="frase2" for="nombre">Nombre</label>
+                        <label  for="nombre">Nombre</label>
                         <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingrese el nombre del producto" value="{{isset($merch)? $merch->nombre : old('nombre')}}">
                     </div>
 
                     <div class="form-group">
-                        <label class="frase2" for="descripcion">Descripción</label>
+                        <label  for="descripcion">Descripción</label>
                         <textarea type="text" name="descripcion" id="descripcion" class="form-control" aria-describedby="help_descripcion" >{{isset($merch) ? $merch->descripcion : old('descripcion')}}</textarea>
                         <small id="help_descripcion" class="text-muted">Descripción breve del producto.</small>
                     </div>
 
-                        <div class="frase2" class="form-group">
+                        <div  class="form-group">
                             <label  for="precio">Precio</label>
                             <input type="number" name="precio" id="precio" class="form-control" placeholder="Ingrese el precio del producto" value="{{isset($merch)? $merch->precio : old('precio')}}">
                         </div>
 
-                            <div class="frase2" class="form-group">
+                            <div  class="form-group">
                                 <label  for="precio">Stock</label>
                                 <input type="number" name="stock" id="stock" class="form-control" placeholder="Cantidad de Stock" value="{{isset($merch)? $merch->stock : old('stock')}}">
                             </div>

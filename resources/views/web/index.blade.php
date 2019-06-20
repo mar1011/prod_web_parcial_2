@@ -40,11 +40,22 @@
             </div>
         </div>
     </article>
-    <article id="flyer">
-        <div class="container-fluid">
-            <div class="container">
-                <img class="img-fluid" src="{{asset("img/flyer.jpg")}}" alt="Flyer de Gira" >
+    <article id="flyer" class="nov">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <img class="img-fluid" src="{{asset("img/gira3.jpg")}}" alt="Flyer de Gira" width="500" >
+                </div>
+
+                <div class="col-md-6">
+                    <div class="container">
+
+                        <img class="img-fluid" src="img/flyer.jpg" alt="Flyer de Gira" width="500" >
+                    </div>
+                </div>
             </div>
+        </div>
         </div>
     </article>
 @endsection

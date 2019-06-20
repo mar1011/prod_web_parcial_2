@@ -19,7 +19,13 @@
                             <a class=" nav-link" href="{{route("merch.index")}}"> Lista Merch</a>
 
 
+
                         </li>
+                        <ul class="navbar-nav mr-0">
+                            <li class="nav-item">
+                                <a class="nav-link"href="{{route("web.index")}}">Inicio</a>
+                            </li>
+                        </ul>
                     </ul>
                            <!-- <ul class="navbar-nav mr-0">
                                 <li class="nav-item">

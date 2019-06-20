@@ -10,7 +10,7 @@
         <div class="col-12">
             <h2 class="titulo text-center display-4">Lista de Merch</h2>
 
-            <a id = "cargar" href="{{ route("merch.create") }}" class="btn btn-lg btn-dark">Cargar Nuevo</a>
+            <a href="{{ route("merch.create") }}" class="btn btn-lg btn-primary">Cargar Nuevo</a>
         </div>
     </div>
 
