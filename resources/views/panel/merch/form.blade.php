@@ -20,8 +20,6 @@
             </div>
         @endif
         <div class="row">
-
-
             <div class="col-6 offset-3">
                 @if(isset($merch))
                 <form action="{{route("merch.update",$merch->id)}}" enctype="multipart/form-data" method="POST" class=" p-3">

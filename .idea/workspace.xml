@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d2ec5ed-9f51-4bfe-898f-3f713662d42c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/web/contacto.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/web/contacto.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MerchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MerchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panel/merch/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panel/merch/form.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,18 +20,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/panel/merch/form.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-175">
-              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-              <folding>
-                <element signature="e#395#402#1#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/app.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
@@ -39,20 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/web/contacto.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MerchController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+            <state relative-caret-position="370">
+              <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
               <folding>
                 <element signature="e#41#62#0#PHP" expanded="true" />
               </folding>
@@ -63,29 +43,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/panel/merch/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
+            <state relative-caret-position="-326">
               <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Requests/MerchRequest.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/panel/merch/form.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
-              <folding>
-                <element signature="e#7#389#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="300">
+              <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -153,9 +121,9 @@
         <option value="$PROJECT_DIR$/resources/views/panel/partials/header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/web/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/MerchRequest.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/contacto.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MerchController.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/merch/form.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/contacto.blade.php" />
       </list>
     </option>
   </component>
@@ -271,6 +239,24 @@
             <path>
               <item name="angryzeta1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\xampp\htdocs\angryzeta1" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="angryzeta1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\xampp\htdocs\angryzeta1" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="angryzeta1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\xampp\htdocs\angryzeta1" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Controllers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="angryzeta1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\xampp\htdocs\angryzeta1" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
@@ -284,7 +270,15 @@
               <item name="C:\xampp\htdocs\angryzeta1" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="panel" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="angryzeta1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\xampp\htdocs\angryzeta1" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="panel" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="merch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -351,12 +345,12 @@
       <workItem from="1560639048213" duration="8302000" />
       <workItem from="1560653618875" duration="1990000" />
       <workItem from="1560656733722" duration="47523000" />
-      <workItem from="1560891405570" duration="40633000" />
+      <workItem from="1560891405570" duration="40934000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133365000" />
+    <option name="totallyTimeSpent" value="133666000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -717,23 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/merch/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MerchController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
-          <folding>
-            <element signature="e#41#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/MerchRequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -741,13 +718,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/merch/form.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/web/contacto.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-175">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding>
-            <element signature="e#395#402#1#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="125">
+          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -758,10 +732,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/contacto.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MerchController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        <state relative-caret-position="370">
+          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+          <folding>
+            <element signature="e#41#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/merch/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-326">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/merch/form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
         </state>
       </provider>
     </entry>
