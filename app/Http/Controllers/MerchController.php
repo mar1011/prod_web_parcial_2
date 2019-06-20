@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\MerchRequests;
+
 use App\Models\Merch;
 use Dotenv\Validator;
 use Illuminate\Http\Request;
@@ -36,18 +36,18 @@ class MerchController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\MerchRequest..$request
+     * @param  \App\Http\Requests\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(MerchRequest $request)
+    public function store(Request $request)
     {
-        $datos = $request->all();
+       $datos = $request->all();
 
         if($request->hasFile('imagen')):
 
-            $nombre = $datos["nombre"] . "." . $request->imagen->extension();
+            $nombre = $request->nombre . "." . $request->imagen->extension();
             $request->imagen->storeAs("merch",$nombre);
-            $datos["imagen"]= "merch/$nombre";
+            $datos["imagen"]= "img/$nombre";
         endif;
 
         if(Merch::create($datos)):
@@ -55,6 +55,7 @@ class MerchController extends Controller
         else:
             return redirect()->back()->withInput()->withErrors("No se pudo cargar");
         endif;
+
     }
 
     /**
@@ -89,7 +90,7 @@ class MerchController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(MerchRequest $request, $id)
+    public function update(Request $request, $id)
     {
         $merch = Merch::find($id);
 

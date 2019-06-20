@@ -19,7 +19,7 @@ class CreateMerchTable extends Migration
             $table->string("imagen",75)->nullable();
             $table->string("descripcion",250)->nullable();
             $table->float("precio");
-            $table->boolean("stock")->default(1);
+            $table->integer("stock");
 
             $table->timestamps();
         });
