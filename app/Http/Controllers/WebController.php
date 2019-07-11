@@ -26,7 +26,14 @@ class WebController extends Controller
     {
     return view("web.contacto");
     }
-
+    public function login()
+    {
+        return view("auth.login");
+    }
+    public function register()
+    {
+        return view("auth.register");
+    }
 
     /**
      * Show the form for creating a new resource.

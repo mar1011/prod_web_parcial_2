@@ -22,11 +22,32 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav mr-0">
-
+                    @if(Auth::check())
                     <li class="nav-item">
                          <a class="nav-link"href="{{route("panel.index")}}">Panel - {{ Auth::user()->user_name }}</a>
                     </li>
+                        <li>
+                            <a href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout').submit();">
+                                Logout
+                            </a>
 
+                            <form id="logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </li>
+
+                    @else
+                        <li>
+                            <a href="{{ route("login") }}">Login</a>
+                        </li>
+
+                        <li>
+                            <a href="{{ route("register") }}">Registrarse</a>
+                        </li>
+
+                    @endif
                     </ul>
                 </div>
             </nav>
