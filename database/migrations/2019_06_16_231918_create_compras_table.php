@@ -18,8 +18,8 @@ class CreateComprasTable extends Migration
             $table->string("metodo_pago",20);
 
             //campos de FK
-            $table->unsignedInteger("merch_id");
-            $table->unsignedInteger("clientes_id");
+            $table->unsignedInteger("merch_id")->unsigned();
+            $table->unsignedInteger("clientes_id")->unsigned();
 
             $table->foreign("merch_id")->references
             ("id")->on("merch")->onUpdate
