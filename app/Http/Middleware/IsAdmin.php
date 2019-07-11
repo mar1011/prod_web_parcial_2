@@ -15,6 +15,9 @@ class IsAdmin
      */
     public function handle($request, Closure $next)
     {
+        if(Auth::user()->perfil != 1)
+            return redirect()->route("web.index");
+
         return $next($request);
     }
 }
