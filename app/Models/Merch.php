@@ -20,4 +20,6 @@ class Merch extends Model
         return $this->belongsToMany(Cliente::class,"compras",
             "merch_id","clientes_id");
     }
+
+
 }
