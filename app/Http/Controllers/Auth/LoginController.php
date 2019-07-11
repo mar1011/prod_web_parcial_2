@@ -31,11 +31,6 @@ class LoginController extends Controller
      */
     protected $redirectTo = '/panel';
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
 
     public function username()
     {
