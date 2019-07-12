@@ -1,11 +1,16 @@
 @extends('web.template')
 
 @section('contenido')
+    <div class="row nov">
+        <div class="container-fluid">
+            <h4 class="titulo text-center display-4">Login</h4>
+        </div>
+    </div>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Login</div>
+                <div class="card-header">Logueate</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">

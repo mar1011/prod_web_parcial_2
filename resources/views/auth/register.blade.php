@@ -1,6 +1,11 @@
 @extends('web.template')
 
 @section('contenido')
+    <div class="row nov">
+        <div class="container-fluid">
+            <h4 class="titulo text-center display-4">Registro</h4>
+        </div>
+    </div>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

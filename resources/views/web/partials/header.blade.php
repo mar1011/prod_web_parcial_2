@@ -21,7 +21,7 @@
                         <a class=" nav-link" href="{{ route("web.contacto") }}">Contacto</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav mr-0">
+                <ul class="navbar-nav mr-4">
                     @if(Auth::check())
                     <li class="nav-item">
                          <a class="nav-link"href="{{route("panel.index")}}">Panel - {{ Auth::user()->user_name }}</a>
