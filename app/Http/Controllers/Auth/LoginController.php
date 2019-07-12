@@ -73,7 +73,6 @@ class LoginController extends Controller
             $campo = "email";
 
         if(Auth::attempt([$campo => $credenciales["user"], "password" => $credenciales["password"]])):
-            // Si pasa esto el usuario está logueado
 
             return redirect()->route("panel.index");
 

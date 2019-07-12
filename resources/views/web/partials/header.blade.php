@@ -24,7 +24,7 @@
                 <ul class="navbar-nav mr-4">
                     @if(Auth::check())
                     <li class="nav-item active">
-                         <a class="nav-link"href="{{route("panel.index")}}">Panel - {{ Auth::user()->user_name }}</a>
+                         <a class="nav-link"href="{{route("panel.index")}}">{{ Auth::user()->user_name }}</a>
                     </li>
                         <li>
                             <a href="{{ route('logout') }}"
