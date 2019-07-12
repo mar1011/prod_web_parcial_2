@@ -16,10 +16,11 @@ class Compra extends Model
             "metodo_pago","merch_id","clientes_id"
         ];
 
-    protected function Merch(){
-        return $this->belongsTo(Merch::class,"merch_id");
-    }
+
     protected function Cliente(){
         return $this->belongsTo(Cliente::class,"clientes_id");
+    }
+    protected function Merch(){
+        return $this->belongsTo(Merch::class,"merch_id");
     }
 }
