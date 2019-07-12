@@ -17,7 +17,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">Usuario</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
 
                             <div class="col-md-6">
                                 <input id="user" type="text" class="form-control{{ $errors->has('user') ? ' is-invalid' : '' }}" name="user" value="{{ old('user') }}" required autofocus>

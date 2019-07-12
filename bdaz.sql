@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-06-2019 a las 01:58:24
+-- Tiempo de generación: 12-07-2019 a las 06:13:45
 -- Versión del servidor: 10.3.15-MariaDB
 -- Versión de PHP: 7.3.6
 
@@ -170,7 +170,7 @@ CREATE TABLE `merch` (
   `imagen` varchar(75) DEFAULT NULL,
   `descripcion` varchar(250) DEFAULT NULL,
   `precio` double(8,2) NOT NULL,
-  `stock` int(1) NOT NULL DEFAULT 1,
+  `stock` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -180,10 +180,10 @@ CREATE TABLE `merch` (
 --
 
 INSERT INTO `merch` (`id`, `nombre`, `imagen`, `descripcion`, `precio`, `stock`, `created_at`, `updated_at`) VALUES
-(1, 'CD Angry Zeta & The Hillbullys', 'img/cd1.jpg', 'Primer CD de Estudio', 100.00, 50, NULL, '2019-06-20 23:50:47'),
-(2, 'CD Angry Zeta & The Hillbullys', 'img/cd 2.jpg', 'Cd grabado en Vivo', 150.00, 100, NULL, '2019-06-20 21:48:51'),
-(3, 'Parche Angry Zeta & The Hillbullys', 'img/parche.jpg', 'Parches bordados.\r\n                                Colores: Negro y Blanco.\r\n                                Colores: Rojo, Blanco y Amarillo', 80.00, 200, NULL, '2019-06-20 21:49:01'),
-(4, 'Pin Angry Zeta & The Hillbullys', 'img/pin.jpg', 'Pin de metal. \r\n                                Confeccionados por HorrorFlorido.', 80.00, 200, NULL, '2019-06-20 21:49:10'),
+(1, 'CD Angry Zeta & The Hillbullys', 'img/cd1.jpg', 'Primer CD de Estudio', 100.00, 50, NULL, '2019-06-21 02:50:47'),
+(2, 'CD Angry Zeta & The Hillbullys', 'img/cd 2.jpg', 'Cd grabado en Vivo', 150.00, 100, NULL, '2019-06-21 00:48:51'),
+(3, 'Parche Angry Zeta & The Hillbullys', 'img/parche.jpg', 'Parches bordados.\r\n                                Colores: Negro y Blanco.\r\n                                Colores: Rojo, Blanco y Amarillo', 80.00, 200, NULL, '2019-06-21 00:49:01'),
+(4, 'Pin Angry Zeta & The Hillbullys', 'img/pin.jpg', 'Pin de metal. \r\n                                Confeccionados por HorrorFlorido.', 80.00, 200, NULL, '2019-06-21 00:49:10'),
 (6, 'Remera Angry Zeta & The Hillbullys', 'img/re2.jpg', 'Remera con el logo del oso.\n                                Talles: S-M-L-XL-XXL', 400.00, 0, NULL, NULL),
 (11, 'Remera Angry Zeta & The HillBullys', 'img/re1.jpg', 'Remeras en talle S-M-L-XL', 400.00, 12, NULL, NULL);
 
@@ -204,10 +204,11 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(13, '2014_10_12_000000_create_users_table', 1),
-(14, '2014_10_12_100000_create_password_resets_table', 1),
-(15, '2019_06_16_015016_create_clientes_table', 1),
-(16, '2019_06_16_015114_create_merch_table', 1);
+(27, '2014_10_12_000000_create_users_table', 1),
+(28, '2014_10_12_100000_create_password_resets_table', 1),
+(29, '2019_06_16_015016_create_clientes_table', 1),
+(30, '2019_06_16_015114_create_merch_table', 1),
+(31, '2019_07_11_185301_update_users_table', 1);
 
 -- --------------------------------------------------------
 
@@ -229,14 +230,25 @@ CREATE TABLE `password_resets` (
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
   `email` varchar(255) NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) NOT NULL,
   `remember_token` varchar(100) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `user` varchar(20) NOT NULL,
+  `perfil` tinyint(3) UNSIGNED NOT NULL DEFAULT 2
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `user`, `perfil`) VALUES
+(1, 'Mariana', 'mariana.suarezdelcerro@davinci.edu.ar', NULL, '$2y$10$iaH8pzt3El9ZRDnDbOk7POVyM7MfD4ubAUpDuh1BTVE8sB8mQdxAe', NULL, NULL, NULL, 'admin', 1),
+(2, NULL, 'marianasdc10@gmail.com', NULL, '$2y$10$iaH8pzt3El9ZRDnDbOk7POVyM7MfD4ubAUpDuh1BTVE8sB8mQdxAe', NULL, '2019-07-12 04:01:03', '2019-07-12 04:01:03', 'marianasdc10', 2),
+(3, NULL, 'plichuk@hotmail.com', NULL, '$2y$10$Da4MPotXmoa84geS08zdauedb/vxHUUGlSV.fonE894jFEqeynO9C', NULL, '2019-07-12 04:10:55', '2019-07-12 04:10:55', 'plichuk', 2);
 
 --
 -- Índices para tablas volcadas
@@ -300,19 +312,19 @@ ALTER TABLE `compras`
 -- AUTO_INCREMENT de la tabla `merch`
 --
 ALTER TABLE `merch`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

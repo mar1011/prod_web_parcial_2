@@ -26,7 +26,7 @@
                     <li class="nav-item active">
                          <a class="nav-link"href="{{route("panel.index")}}">{{ Auth::user()->user_name }}</a>
                     </li>
-                        <li>
+                        <li class="nav-item active">
                             <a href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout').submit();">
