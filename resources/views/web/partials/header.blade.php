@@ -23,7 +23,7 @@
                 </ul>
                 <ul class="navbar-nav mr-4">
                     @if(Auth::check())
-                    <li class="nav-item">
+                    <li class="nav-item active">
                          <a class="nav-link"href="{{route("panel.index")}}">Panel - {{ Auth::user()->user_name }}</a>
                     </li>
                         <li>
@@ -39,12 +39,12 @@
                         </li>
 
                     @else
-                        <li>
-                            <a href="{{ route("login") }}">Login</a>
+                        <li class="nav-item active">
+                            <a  href="{{ route("login") }}">Login</a>
                         </li>
 
-                        <li>
-                            <a href="{{ route("register") }}">Registrarse</a>
+                        <li class="nav-item active">
+                            <a  href="{{ route("register") }}">Registrarse</a>
                         </li>
 
                     @endif
