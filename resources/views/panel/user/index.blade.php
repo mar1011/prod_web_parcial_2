@@ -20,6 +20,7 @@
                         <tr>
                             <th>Nombre</th>
                             <th>Mail</th>
+                            <th>Password</th>
                             <th>User</th>
                             <th>Perfil</th>
 

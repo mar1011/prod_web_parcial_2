@@ -29,6 +29,13 @@
                                     <input type="text" name="mail" id="mail" class="form-control" placeholder="Ingrese el E-mail" value="">
                                 </div>
 
+                                <div class="form-group">
+                                    <label class= "text-white" for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+
+                                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+
+                                </div>
+
                                 <div  class="form-group">
                                     <label class="text-white" for="user">User</label>
                                     <input type="text" name="user" id="user" class="form-control" placeholder="Ingrese el User" value="">
