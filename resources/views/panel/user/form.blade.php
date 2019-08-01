@@ -31,9 +31,7 @@
 
                                 <div class="form-group">
                                     <label class= "text-white" for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-
-                                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-
+                                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
                                 </div>
 
                                 <div  class="form-group">
@@ -42,12 +40,14 @@
                                 </div>
 
                                 <div class="form-group">
-                                <label class="text-white">Perfil</label>
+                                    <label class="text-white">Perfil</label>
                                 </div>
+
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
                                     <label class="form-check-label text-white" for="inlineRadio1">1</label>
                                 </div>
+
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
                                     <label class="form-check-label text-white" for="inlineRadio2">2</label>
