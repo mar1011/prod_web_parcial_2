@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -12,9 +12,10 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(User $user)
     {
-        return view("panel.user.index");
+        $users-> $user->all();
+        return view("panel.user.index", compact("users"));
 
     }
 
@@ -23,9 +24,10 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(User $user)
     {
-        return view("panel.user.form");
+        $users-> $user->all();
+        return view("panel.user.form",compact("users"));
     }
 
     /**
@@ -36,7 +38,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        \App\User::create([
+        \App\Models\User::create([
         $name = $request->nombre;
         $email = $request->mail;
         $password = bcrypt($request[password]);
@@ -63,7 +65,10 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $users = User::all();
+        $users= User::find($id);
+
+        return view("panel.user.form",compact("user","users"));
     }
 
     /**
