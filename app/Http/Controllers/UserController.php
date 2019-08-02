@@ -14,8 +14,8 @@ class UserController extends Controller
      */
     public function index(User $user)
     {
-        $users-> $user->all();
-        return view("panel.user.index", compact("users"));
+       $users = $user->all();
+        return view("panel.user.index",compact('users'));
 
     }
 
@@ -26,8 +26,8 @@ class UserController extends Controller
      */
     public function create(User $user)
     {
-        $users-> $user->all();
-        return view("panel.user.form",compact("users"));
+        $users = $user->all();
+        return view("panel.user.form", compact('users'));
     }
 
     /**
@@ -38,13 +38,24 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        \App\Models\User::create([
-        $name = $request->nombre;
-        $email = $request->mail;
-        $password = bcrypt($request[password]);
-        $user = $user->user;
-        ]);
+        $datos = $request->all();
+
+            $nombre = $request->name;
+            $email = $request->email;
+            $user = $request->user;
+
+            $datos["name"]=$nombre;
+            $datos["email"]=$email;
+            $datos["user"]=$user;
+
+        if(User::create($datos)):
+            return redirect()->route("user.index")->with("ok","Usuario cargado con éxito!");
+        else:
+            return redirect()->back()->withInput()->withErrors("No se pudo cargar");
+        endif;
+
     }
+
 
     /**
      * Display the specified resource.
@@ -66,7 +77,7 @@ class UserController extends Controller
     public function edit($id)
     {
         $users = User::all();
-        $users= User::find($id);
+        $user= User::find($id);
 
         return view("panel.user.form",compact("user","users"));
     }
@@ -80,7 +91,18 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+
+        $datos = $request->all();
+
+
+
+
+        if($user->update($datos)):
+            return redirect()->route("user.index")->with("ok","Se modificó correctamente");
+        else:
+            return redirect()->back()->withInput()->withErrors("Error al editar");
+        endif;
     }
 
     /**
@@ -89,8 +111,15 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, User $users)
     {
-        //
+        $user = $users->find($id);
+
+        if($user->delete()):
+            return redirect()->route("user.index")->with('ok','El usuario ha sido eliminado con éxito!');
+        else:
+            return redirect()->back()->withErrors("No se pudo eliminar");
+        endif;
+
     }
 }

@@ -35,7 +35,7 @@
 
         Route::resource("/merch","MerchController");
 
-            Route::resource("/user","UserController");
+        Route::resource("/user","UserController");
         });
 
 
