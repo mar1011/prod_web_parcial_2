@@ -51,12 +51,12 @@ class UserController extends Controller
             $datos["password"]=$password;
             $datos["user"]=$user;
 
+
         if(User::create($datos)):
             return redirect()->route("user.index")->with("ok","Usuario cargado con éxito!");
         else:
             return redirect()->back()->withInput()->withErrors("No se pudo cargar");
         endif;
-
     }
 
 
