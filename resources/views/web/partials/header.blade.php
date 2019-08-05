@@ -21,8 +21,8 @@
                         <a class=" nav-link" href="{{ route("web.contacto") }}">Contacto</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav mr-4">
-                    @if(Auth::check())
+                <ul class="navbar-nav mr-4 ">
+                    @if(Auth::check() && Auth::User()->perfil=='1')
                     <li class="nav-item active">
                          <a class="nav-link"href="{{route("panel.index")}}">{{ Auth::user()->user_name }}</a>
                     </li>
