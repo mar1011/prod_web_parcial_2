@@ -30,7 +30,7 @@
                         @csrf
                                 <div class="form-group">
                                     <label class="text-white" for="nombre">Nombre</label>
-                                    <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingrese el nombre del Usuario" value="{{isset($user)? $user->name : old('name')}}">
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="Ingrese el nombre del Usuario" value="{{isset($user)? $user->name : old('name')}}">
                                 </div>
 
                                 <div class="form-group">
@@ -38,12 +38,11 @@
                                     <input type="text" name="mail" id="mail" class="form-control" placeholder="Ingrese el E-mail" value="{{isset($user)? $user->email : old('email')}}">
                                 </div>
 
-                             <!--
                                 <div class="form-group">
-                                    <label class= "text-white" for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                                    <label  for="inputPassword3" class="col-sm-2 col-form-label text-white">Password</label>
                                     <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                                </div>*/
-                                  -->
+                                </div>
+
                                 <div  class="form-group">
                                     <label class="text-white" for="user">User</label>
                                     <input type="text" name="user" id="user" class="form-control" placeholder="Ingrese el User" value="{{isset($user)? $user->user : old('user')}}">

@@ -41,11 +41,14 @@ class UserController extends Controller
         $datos = $request->all();
 
             $nombre = $request->name;
-            $email = $request->email;
+            $email = $request->mail;
+            $password= bcrypt($request->password);
             $user = $request->user;
+
 
             $datos["name"]=$nombre;
             $datos["email"]=$email;
+            $datos["password"]=$password;
             $datos["user"]=$user;
 
         if(User::create($datos)):
